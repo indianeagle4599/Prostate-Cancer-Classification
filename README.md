@@ -1,43 +1,38 @@
 # Problem Statement 
-This should be a brief description of the domain of your dataset (e.g. if it is the Titanic Dataset then write about the ship, the incident that happened, what you're trying to do with the data).
+The Prostate Cancer Classification task simply asks for a predictive model which, given the data, successfully suggests if a particular case is cancerous or not. An effective model can help speed up the process of cancer detection and can help provide almost accurate preliminary results.
+
 ## Dataset
 
-The dataset used is the [Name of the Dataset](Download link) from (source of download e.g Kaggle). If the task is a classification task, then you must specify the number of classes and give a 1 line description of each class as follows(example of Iris Dataset). 
+The dataset used is the [Prostate Cancer Classification](https://www.kaggle.com/sajidsaifi/prostate-cancer) from (Kaggle). This is the dataset of 100 patients to implement the machine learning algorithm and thereby interpreting results. The data set consists of 100 observations and 10 variables (out of which 8 numeric variables and a categorical variable and an ID):
 
-The 3 class labels are:
+0. Id
+1. Radius
+2. Texture
+3. Perimeter
+4. Area
+5. Smoothness
+6. Compactness
+7. diagnosis_result
+8. Symmetry
+9. Fractal dimension
+
+The class labels are:
 <br>
 
-**1. Iris Setosa:** Given iris flower belongs to the Setosa species
+**1. M:** Malicious. May be cancerous.
 <br>
-**2. Iris Virginica:** Given iris flower belongs to the Virginica species
-<br>
-**3. Iris Versicolor:** Given iris flower belongs to the Versicolor species
-
-If the task is a regression task, then explain the target variable and give brief statistics.(e.g. Housing Prices)
-
-**Target Variable: SalePrice**
-<br>
-<br>
-Sale Price refers to the selling price of the house.
-<br>
-**Mean Selling Price:** 121,000$
-<br>
-**Max Selling Price:** 1,000,000$
-<br>
-**Min Selling Price:** 45,000$
+**2. B:** Benign. May not be cancerous.
 
 
-## Model(s) Used
+## Models Used
 
-This needs to be a description of the model used and a brief overview of how it works in theory (e.g taken of a CNN Model): 
+**1. K Nearest Neighbours:** This model is most useful in data which can be linearly separated. It simply finds the "K nearest neighbours" and uses the hoghest class occurence as the final class preidction.
 
-The network architecture used was a basic CNN model, with Max Pooling and ReLU Activation functions. Input images are resized to an optimal size and then fed into the **Convolutional layer**. These images are converted to their pixel values, which can be imagined as a three-dimensional matrix for the purpose of visualization. The **Convolutional layer** has a kernel. This kernel is generally a small matrix of specified kernel size mxnx3 (3 for RGB images). 
-<br>
+**2. Support Vector Classifier:** This model is also very useful when the data is linearly separable. Although, SVMs are capable of projecting the data into greater dimensions to find out better patterns.
 
-**Rectified Linear Unit (ReLU)** is the activation layer used in CNNs.The activation function is applied to increase non-linearity in the CNN. Images are made of different objects that are not linear to each other.
-
-
-**Max Pooling:** A limitation of the feature map output of Convolutional Layers is that they record the precise position of features in the input. This means that small movements in the position of the feature in the input image will result in a different feature map. This can happen with re-cropping, rotation, shifting, and other minor changes to the input image. A common approach to addressing this problem from signal processing is called down sampling. This is where a lower resolution version of an input signal is created that still contains the large or important structural elements, without the fine detail that may not be as useful to the task.
+**3. Decision Tree Classifier:** This model identifies the most informative attribute at every level and uses it to make a tree. The final tree can then be used as a simple if-else statement to identify the final prediction.
 
 ## Future Work
-Good ideas or strategies that you were not able to implement which you think can help  improve performance.
+1. We can perform Hyperparameter Tuning on the models used to find out how much the accuracy can be improved.
+2. We can try using Neural Networks.
+3. We can perform regression instead of classification to get the probabilities. Once we have them, we can set a threshold suggesting the classes more appropriately.
