@@ -26,7 +26,7 @@ The class labels are:
 
 ## Models Used
 
-**1. K Nearest Neighbours:** This model is most useful in data which can be linearly separated. It simply finds the "K nearest neighbours" and uses the hoghest class occurence as the final class preidction.
+**1. K Nearest Neighbours:** This model is most useful in data which can be linearly separated. It simply finds the "K nearest neighbours" and uses the highest class occurence as the final class preidction.
 
 **2. Support Vector Classifier:** This model is also very useful when the data is linearly separable. Although, SVMs are capable of projecting the data into greater dimensions to find out better patterns.
 
